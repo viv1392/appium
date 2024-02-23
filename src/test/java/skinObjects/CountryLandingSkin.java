@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CountryLandingSkin {
     WebDriver driver;
+    public GenderSelection gender;
 	public CountryLandingSkin(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -15,8 +16,10 @@ public class CountryLandingSkin {
      WebElement ele;
 	@FindBy(xpath="//android.widget.TextView[@text='Get Started with US']")
 	WebElement ele1;
-	public void countrySelection() {
+	public GenderSelection countrySelection() {
 		ele.click();
 		ele1.click();
+		gender=new GenderSelection(driver);
+		return gender;
 	}
 }

@@ -20,17 +20,26 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import skinObjects.BodyTypeYouWant;
+import skinObjects.CurrentBodyType;
+import skinObjects.GenderSelection;
 
 public class KetoTest extends BaseTest {
+	GenderSelection gender;
+	CurrentBodyType currentBody;
+	BodyTypeYouWant bodyPref;
 	@Test
 	public void ketoMenTest() throws MalformedURLException, Throwable {
-		country.countrySelection();
+		gender=country.countrySelection();
+		currentBody=gender.genderSelectionMen();
+		bodyPref=currentBody.plump();
+		bodyPref.fit();
 		
-		driver.findElement(By.xpath(
-				"//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView"))
-				.click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Plump']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Fit']")).click();
+		//driver.findElement(By.xpath(
+				//"//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView"))
+				//.click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='Plump']")).click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='Fit']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Loose weight']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Boost brain power']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Improve bone health']")).click();
