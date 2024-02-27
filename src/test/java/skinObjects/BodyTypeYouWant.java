@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BodyTypeYouWant {
      WebDriver driver;
+     public WhatDoYouWantToAchieve achieve;
 	public BodyTypeYouWant(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -17,14 +18,20 @@ public class BodyTypeYouWant {
 	WebElement ele2;
 	@FindBy(xpath="//android.widget.TextView[@text='Bulk']")
 	WebElement ele3;
-	public void fit() {
+	public WhatDoYouWantToAchieve fit() {
 		ele1.click();
+		achieve=new WhatDoYouWantToAchieve(driver);
+		return achieve;
 	}
-	public void cut() {
+	public WhatDoYouWantToAchieve cut() {
 		ele2.click();
+		achieve=new WhatDoYouWantToAchieve(driver);
+		return achieve;
 	}
-	public void plump() {
+	public WhatDoYouWantToAchieve plump() {
 		ele3.click();
+		achieve=new WhatDoYouWantToAchieve(driver);
+		return achieve;
 	}
 
 }

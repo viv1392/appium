@@ -1,69 +1,90 @@
 package appiumTest;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
-import com.google.common.collect.ImmutableMap;
 
 import baseTest.BaseTest;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 import skinObjects.BodyTypeYouWant;
 import skinObjects.CurrentBodyType;
 import skinObjects.GenderSelection;
+import skinObjects.LastHappy;
+import skinObjects.MealPreparationTime;
+import skinObjects.Meat;
+import skinObjects.SocialCustomersPage;
+import skinObjects.TargetZone;
+import skinObjects.WhatDoYouWantToAchieve;
 
 public class KetoTest extends BaseTest {
 	GenderSelection gender;
 	CurrentBodyType currentBody;
 	BodyTypeYouWant bodyPref;
+	WhatDoYouWantToAchieve achieve;
+	SocialCustomersPage social;
+	TargetZone targetzone;
+	LastHappy happy;
+	MealPreparationTime time;
+	Meat meat;
 	@Test
 	public void ketoMenTest() throws MalformedURLException, Throwable {
 		gender=country.countrySelection();
 		currentBody=gender.genderSelectionMen();
 		bodyPref=currentBody.plump();
-		bodyPref.fit();
+		achieve=bodyPref.fit();
+		achieve.looseWeight();
+		achieve.boostBrainPowe();
+		achieve.reduceCholestrolLevel();
+		achieve.improveBoneHealth();
+		social=achieve.cont();
+		targetzone=social.socialPage();
+		targetzone.belly();
+		targetzone.butt();
+		targetzone.pecs();
+		targetzone.legs();
+		happy=targetzone.cont();
+		happy.never();
+		time=happy.contt();
+		meat=time.upTo1hr();
+		meat.nonVeg();
 		
 		//driver.findElement(By.xpath(
 				//"//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView"))
 				//.click();
 		//driver.findElement(By.xpath("//android.widget.TextView[@text='Plump']")).click();
 		//driver.findElement(By.xpath("//android.widget.TextView[@text='Fit']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Loose weight']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Boost brain power']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Improve bone health']")).click();
-		driver.findElement(AppiumBy.androidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"Reduce the risk of cancer\"))"))
-				.click();
-
-		driver.findElement(By.xpath("//android.view.View")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Continue']")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Belly']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Butt']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Pecs']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Legs']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.view.View")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='More than 4 years ago']")).click();
-		driver.findElement(By.xpath("//android.view.View")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='More than 1 hour']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Chicken']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Fish']")).click();
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Seafood']")).click();
-		driver.findElement(By.xpath("//android.view.View")).click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='Loose weight']")).click();
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Boost brain power']")).click();
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Improve bone health']")).click();
+//		driver.findElement(AppiumBy.androidUIAutomator(
+//				"new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\"Reduce the risk of cancer\"))"))
+//				.click();
+//
+//		driver.findElement(By.xpath("//android.view.View")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Continue']")).click();
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Belly']")).click();
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Butt']")).click();
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Pecs']")).click();
+//		driver.findElement(By.xpath("//android.widget.TextView[@text='Legs']")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//android.view.View")).click();
+		
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='More than 4 years ago']")).click();
+		//driver.findElement(By.xpath("//android.view.View")).click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='More than 1 hour']")).click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='Chicken']")).click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='Fish']")).click();
+		//driver.findElement(By.xpath("//android.widget.TextView[@text='Seafood']")).click();
+		//driver.findElement(By.xpath("//android.view.View")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Broccoli']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Zucchini']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Lettuce']")).click();
