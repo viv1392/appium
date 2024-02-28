@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-27T11:29:56 IST" name="Default suite" finished-at="2024-02-27T11:34:00 IST" duration-ms="244044">
+  <suite started-at="2024-02-28T16:22:23 IST" name="Default suite" finished-at="2024-02-28T16:24:23 IST" duration-ms="120688">
     <groups>
     </groups>
-    <test started-at="2024-02-27T11:29:56 IST" name="Default test" finished-at="2024-02-27T11:34:00 IST" duration-ms="244044">
+    <test started-at="2024-02-28T16:22:23 IST" name="Default test" finished-at="2024-02-28T16:24:23 IST" duration-ms="120688">
       <class name="appiumTest.KetoTest">
-        <test-method is-config="true" signature="popUp()[pri:0, instance:appiumTest.KetoTest@74e52303]" started-at="2024-02-27T11:29:56 IST" name="popUp" finished-at="2024-02-27T11:30:12 IST" duration-ms="15410" status="PASS">
+        <test-method is-config="true" signature="popUp()[pri:0, instance:appiumTest.KetoTest@74e52303]" started-at="2024-02-28T16:22:23 IST" name="popUp" finished-at="2024-02-28T16:22:39 IST" duration-ms="15775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- popUp -->
-        <test-method signature="ketoMenTest()[pri:0, instance:appiumTest.KetoTest@74e52303]" started-at="2024-02-27T11:30:12 IST" name="ketoMenTest" finished-at="2024-02-27T11:34:00 IST" duration-ms="228578" status="FAIL">
+        <test-method signature="ketoMenTest()[pri:0, instance:appiumTest.KetoTest@74e52303]" started-at="2024-02-28T16:22:39 IST" name="ketoMenTest" finished-at="2024-02-28T16:24:23 IST" duration-ms="104865" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters.
@@ -19,9 +19,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [1116884a-17b8-4686-9196-1c22bb589b45, findElement {using=xpath, value=//android.widget.TextView[@text='I agree']}]
+Command: [c6e3343c-df3b-41d3-9735-51734ca0f7f5, findElement {value=//android.widget.TextView[@text='18,200,000 + Users'], using=xpath}]
 Capabilities {appium:app: C:\Users\HISPL\eclipse-work..., appium:appPackage: ketodietplan.carbmanager.ke..., appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HISPL\eclipse-work..., automationName: UIAutomator2, deviceName: Android Device, platformName: ANDROID}, appium:deviceApiLevel: 33, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 23053RN02I, appium:deviceName: 0c94fe347d76, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2460, appium:deviceUDID: 0c94fe347d76, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 13, appium:statBarHeight: 104, appium:takesScreenshot: true, appium:viewportRect: {height: 2122, left: 0, top: 104, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 1116884a-17b8-4686-9196-1c22bb589b45]]>
+Session ID: c6e3343c-df3b-41d3-9735-51734ca0f7f5]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
@@ -29,9 +29,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [1116884a-17b8-4686-9196-1c22bb589b45, findElement {using=xpath, value=//android.widget.TextView[@text='I agree']}]
+Command: [c6e3343c-df3b-41d3-9735-51734ca0f7f5, findElement {value=//android.widget.TextView[@text='18,200,000 + Users'], using=xpath}]
 Capabilities {appium:app: C:\Users\HISPL\eclipse-work..., appium:appPackage: ketodietplan.carbmanager.ke..., appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HISPL\eclipse-work..., automationName: UIAutomator2, deviceName: Android Device, platformName: ANDROID}, appium:deviceApiLevel: 33, appium:deviceManufacturer: Xiaomi, appium:deviceModel: 23053RN02I, appium:deviceName: 0c94fe347d76, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2460, appium:deviceUDID: 0c94fe347d76, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 13, appium:statBarHeight: 104, appium:takesScreenshot: true, appium:viewportRect: {height: 2122, left: 0, top: 104, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 1116884a-17b8-4686-9196-1c22bb589b45
+Session ID: c6e3343c-df3b-41d3-9735-51734ca0f7f5
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -47,7 +47,11 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at appiumTest.KetoTest.ketoMenTest(KetoTest.java:189)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+at skinObjects.SummaryOfOverallWellness.overAllWellness(SummaryOfOverallWellness.java:23)
+at appiumTest.KetoTest.ketoMenTest(KetoTest.java:89)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

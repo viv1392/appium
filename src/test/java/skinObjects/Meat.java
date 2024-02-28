@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Meat {
 	WebDriver driver ;
+	public  Veggies veggies;
 
 	public Meat(WebDriver driver) {
 		this.driver=driver;
@@ -26,20 +27,26 @@ public class Meat {
 	 WebElement ele6;
 	@FindBy(xpath="//android.view.View")
 	 WebElement ele7;
-	public void nonVeg() {
+	public Veggies nonVeg() {
 		ele1.click();
 		ele2.click();
 		ele3.click();
 		ele4.click();
 		ele7.click();
+		veggies=new  Veggies(driver);
+		return veggies;
 	}
-	public void vegetarian() {
+	public Veggies vegetarian() {
 		ele5.click();
 		ele7.click();
+		veggies=new  Veggies(driver);
+		return veggies;
 	}
-	public void vegan() {
+	public Veggies vegan() {
 		ele6.click();
 		ele7.click();
+		veggies=new  Veggies(driver);
+		return veggies;
 	}
 
 }
