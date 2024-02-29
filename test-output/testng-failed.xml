@@ -6,7 +6,7 @@
       <class name="appiumTest.KetoTest">
         <methods>
           <include name="popUp"/>
-          <include name="ketoMenTest"/>
+          <include name="womenVegan"/>
         </methods>
       </class> <!-- appiumTest.KetoTest -->
     </classes>

@@ -1,14 +1,9 @@
 package skinObjects;
 
-import java.util.HashMap;
-
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import io.appium.java_client.AppiumBy;
 
 public class CurrentWeight {
 	WebDriver driver;

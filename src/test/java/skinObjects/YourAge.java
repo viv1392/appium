@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumBy;
 
-public class YourAge {
+public class YourAge{
     WebDriver driver;
     public SummaryOfOverallWellness wellness;
 	public YourAge(WebDriver driver) {
