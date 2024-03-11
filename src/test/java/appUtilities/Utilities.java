@@ -1,9 +1,14 @@
 package appUtilities;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -31,8 +36,20 @@ public class Utilities {
 	}
 	public void back(WebDriver driver) {
 		driver.navigate().back();
-			
 	}
-}
+    public static String screenShots(WebDriver driver,String testName) {
+    	File srcScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String screenshotPath = System.getProperty("user.dir")+"\\Screenshots\\"+testName+".png";
+		try {
+			FileHandler.copy(srcScreenshot,new File(screenshotPath));
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+		return screenshotPath;
+	}
+  }
+
 	
 
